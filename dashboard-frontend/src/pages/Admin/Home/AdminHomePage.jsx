@@ -146,7 +146,7 @@ export default function AdminHomePage({
       <div className="row w-100 mt-4">
         <div className="col-xs-12">
           <div className="table-header mb-3">
-            <h5 className="fw-bold">Stores List</h5>
+            <h5 className="fw-bold">Posts List</h5>
           </div>
           <DataTable data={posts} fetchData={fetchPosts} cols={columns} />
         </div>
