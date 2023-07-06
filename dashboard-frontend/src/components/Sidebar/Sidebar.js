@@ -41,36 +41,31 @@ export default function Sidebar({ isSubscribed }) {
                 src="https://assets9.lottiefiles.com/packages/lf20_myor1trh.json"
                 background="transparent"
                 speed="1"
-                style={{ width: "100px", height: "100px" }}
+                style={{ width: "50px", height: "50px" }}
                 autoplay
               ></lottie-player>
             )}
           </span>
 
           <div className="text logo-text">
-            <span className="name">Good Food</span>
-            <span className="profession">Saving food App</span>
+            <span className="name">ArtRealm</span>
+            {/* <span className="profession">Arts Galley</span> */}
           </div>
         </div>
 
         <i className="bx bx-chevron-right toggle" onClick={toggleSidebar}></i>
       </header>
 
-      <div className="menu-bar">
+      <div className="menu-bar mt-4">
         <ul className="menu-links">
           <li className="nav-link">
-            <Link to="/admin/dashboard/home">
+            <Link to="/admin/dashboard">
               <i className="bx bx-home-alt icon"></i>
               <span className="text nav-text">Dashboard</span>
             </Link>
           </li>
 
-          <li className="nav-link">
-            <Link to="/admin/dashboard/add-new-user">
-              <i className="bx bx-plus-circle icon"></i>
-              <span className="text nav-text">Add User</span>
-            </Link>
-          </li>
+      
 
           <li className="nav-link">
             <Link to="/admin/dashboard/add-new-admin">
@@ -79,12 +74,6 @@ export default function Sidebar({ isSubscribed }) {
             </Link>
           </li>
 
-          <li className="nav-link">
-            <Link to="/admin/dashboard/deleted-accounts">
-              <i className="bx bx-list-ul icon"></i>
-              <span className="text nav-text">Deleted Accounts</span>
-            </Link>
-          </li>
 
           <li className="nav-link">
             <Link to="/admin/dashboard/edit-content">
@@ -93,12 +82,7 @@ export default function Sidebar({ isSubscribed }) {
             </Link>
           </li>
 
-          <li className="nav-link">
-            <Link to="/admin/dashboard/all-services">
-              <i className="bx bx-shopping-bag icon"></i>
-              <span className="text nav-text">All Services</span>
-            </Link>
-          </li>
+ 
 
           <li className="nav-link">
             <Link to="/admin/dashboard/users-messages">
@@ -113,8 +97,8 @@ export default function Sidebar({ isSubscribed }) {
             <i className="bx bx-log-out icon"></i>
             <span className="text nav-text">Logout</span>
           </li>
-
-          <li className="mode">
+<li></li>
+          {/* <li className="mode">
             <div className="sun-moon">
               <i className="bx bx-moon icon moon"></i>
               <i className="bx bx-sun icon sun"></i>
@@ -124,7 +108,7 @@ export default function Sidebar({ isSubscribed }) {
             <div className="toggle-switch">
               <span className="switch"></span>
             </div>
-          </li>
+          </li> */}
         </div>
       </div>
     </nav>

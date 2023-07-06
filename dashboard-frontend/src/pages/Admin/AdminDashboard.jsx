@@ -13,7 +13,7 @@ import AdminHomePage from "./Home/AdminHomePage";
 import EditContent from "./EditContent/EditContent";
 import AddNewAdmin from "./AddNewAdmin/AddNewAdmin";
 // import AddedServices from "./AddedServices/AddedServices";
-// import UsersMessages from "./UsersMessages/UsersMessages";
+import UsersMessages from "./UsersMessages/UsersMessages";
 
 export default function CustomerDashboard() {
 
@@ -89,14 +89,16 @@ export default function CustomerDashboard() {
     }
   };
 
-  // const fetchUsersMessages = async () => {
-  //   try {
-  //     let responseData = await sendRequest("http://localhost:5000/api/admin/get-users-messages");
-  //     setUsersMessages(responseData);
-  //   } catch(err) {
-  //     console.log(err);
-  //   }
-  // };
+
+  //  fetch user msgs
+  const fetchUsersMessages = async () => {
+    try {
+      let responseData = await sendRequest("http://localhost:3500/admin/users-messages");
+      setUsersMessages(responseData);
+    } catch(err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
     fetchAllPosts();
@@ -106,14 +108,14 @@ export default function CustomerDashboard() {
     fetchContactUsContent();
     // fetchAdmins();
     // fetchAllServices();
-    // fetchUsersMessages();
+    fetchUsersMessages();
   }, []);
 
   return (
     <div>
       <Sidebar />
       <div className="home">
-        <h1>hello world</h1>
+        <h1>Welcome Back</h1>
         <Routes>
           <Route
             index
@@ -129,10 +131,12 @@ export default function CustomerDashboard() {
           />
           {/* <Route path="/add-new-user" element={<AddUser />} /> */}
           <Route path="/add-new-admin" element={<AddNewAdmin />} />
+       
           <Route path="/edit-content" element={<EditContent content={aboutUsContent} fetchAboutUsContent={fetchAboutUsContent} contactUsContent={contactUsContent} fetchContactUsContent={fetchContactUsContent} />} />
+          <Route path="/users-messages" element={<UsersMessages usersMessages={usersMessages} />} />
           {/* <Route path="/deleted-accounts" element={<DeletedAccounts deletedAccounts={deletedAccounts} />} />
           <Route path="/all-services" element={<AddedServices allServices={allServices} fetchAllServices={fetchAllServices} />} />
-          <Route path="/users-messages" element={<UsersMessages usersMessages={usersMessages} />} /> */}
+        */}
         </Routes>
       </div>
     </div>

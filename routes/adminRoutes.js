@@ -10,6 +10,8 @@ router.get("/getAllWebPosts", adminController.getAllWebPosts);
 router.get("/get-users", adminController.getUser);
 router.get("/get-aboutus", adminController.getAboutUsContent);
 router.get("/get-contactus", adminController.getContactUsContent);
+router.get("/users-messages", adminController.getUsersMessages);
+
 router.post("/login", adminController.login);
 router.delete("/delete-post/:postId", adminController.deletePost);
 router.delete("/delete-user/:userId", adminController.deleteUser);

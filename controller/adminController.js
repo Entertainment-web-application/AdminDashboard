@@ -228,6 +228,7 @@ const updateAboutUsContent = async (req, res, next) => {
   }
 };
 
+
 // updateContactUsContent
 
 const updateContactUsContent = async (req, res, next) => {
@@ -252,6 +253,24 @@ const updateContactUsContent = async (req, res, next) => {
   }
 };
 
+// get user msgs
+const getUsersMessages = async (req, res, next) => {
+  try {
+    const result = await pool.query("SELECT * FROM users_feedback");
+
+    res.json(result.rows);
+  } catch (err) {
+    const error = new HttpError(
+      "Could not fetch messages, please try again.",
+      500
+    );
+
+    return next(error);
+  }
+};
+
+
+
 module.exports = {
   login,
   getAllWebPosts,
@@ -264,4 +283,5 @@ module.exports = {
   getContactUsContent,
   updateAboutUsContent,
   updateContactUsContent,
+  getUsersMessages,
 };
