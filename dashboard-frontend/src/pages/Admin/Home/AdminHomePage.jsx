@@ -146,11 +146,7 @@ export default function AdminHomePage({
       <div className="row w-100 mt-4">
         <div className="col-xs-12">
           <div className="table-header mb-3">
-<<<<<<< HEAD
             <h5 className="fw-bold">Posts List</h5>
-=======
-            <h5 className="fw-bold">Stores List</h5>
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
           </div>
           <DataTable data={posts} fetchData={fetchPosts} cols={columns} />
         </div>

@@ -4,37 +4,6 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 const validInfo = require("../utils/UservalidInfo");
 
-<<<<<<< HEAD
-=======
-// const signup = async (req, res) => {
-//   try {
-//     const { name, email, password } = req.body;
-
-//     const user = await pool.query("SELECT * FROM users WHERE user_email = $1", [email]);
-
-//     if (user.rows.length !== 0) {
-//       return res.status(401).send("User already exists. Please log in.");
-//     }
-
-//     const saltRounds = 10;
-//     const salt = await bcrypt.genSalt(saltRounds);
-//     const hashedPassword = await bcrypt.hash(password, salt);
-
-//     const newUser = await pool.query(
-//       "INSERT INTO users (user_name, user_email, user_password) VALUES ($1, $2, $3) RETURNING *",
-//       [name, email, hashedPassword]
-//     );
-
-//     const token = jwtGenerator(newUser.rows[0]);
-
-//     res.json({ token });
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(500).send("Server Error");
-//   }
-// };
-
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -48,11 +17,6 @@ const login = async (req, res) => {
     if (admin.rows.length === 0) {
       return res.status(401).json("Email or password is incorrect");
     }
-<<<<<<< HEAD
-=======
-
-    // const validPassword = await bcrypt.compare(
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
     //   password,
     //   admin.rows[0].user_password
     // );
@@ -73,7 +37,6 @@ const login = async (req, res) => {
   }
 };
 
-<<<<<<< HEAD
 // get All posts from all users
 const getAllWebPosts = async (req, res) => {
   try {
@@ -111,8 +74,6 @@ const getPostComments = async (req, res) => {
   }
 };
 
-=======
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 // Delete Post
 
 const deletePost = async (req, res, next) => {
@@ -123,17 +84,12 @@ const deletePost = async (req, res, next) => {
     if (result) {
       return res.json({ postDeleted: true });
     }
-<<<<<<< HEAD
   } catch (error) {
-=======
-  } catch (err) {
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
     console.error("Error deleting posts:", error);
     res.status(500).json({ message: "Internal server error" });
   }
 };
 
-<<<<<<< HEAD
 // Delete Comment
 
 const deleteComment = async (req, res, next) => {
@@ -153,8 +109,6 @@ const deleteComment = async (req, res, next) => {
   }
 };
 
-=======
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 // confirm Post
 
 const confirmPost = async (req, res, next) => {
@@ -235,18 +189,9 @@ const addNewAdmin = async (req, res, next) => {
         token = jwt.sign({ username: username, email: email }, secretKey, {
           expiresIn: "1h",
         });
-<<<<<<< HEAD
       } catch (error) {
         console.error("Error deleting posts:", error);
         res.status(500).json({ message: "Internal server error" });
-=======
-      } catch (err) {
-        const error = new HttpError(
-          "Signing up failed, please try again.",
-          500
-        );
-        return next(error);
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
       }
 
       all_records.rows[0].token = token;
@@ -266,18 +211,9 @@ const getAboutUsContent = async (req, res, next) => {
   try {
     const result = await pool.query("SELECT * FROM aboutus");
     res.json(result.rows);
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error deleting posts:", error);
     res.status(500).json({ message: "Internal server error" });
-=======
-  } catch (err) {
-    const error = new HttpError(
-      "Could not fetch about us content, please try again.",
-      500
-    );
-    return next(error);
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
   }
 };
 
@@ -287,18 +223,9 @@ const getContactUsContent = async (req, res, next) => {
   try {
     const result = await pool.query("SELECT * FROM contactus");
     res.json(result.rows);
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error deleting posts:", error);
     res.status(500).json({ message: "Internal server error" });
-=======
-  } catch (err) {
-    const error = new HttpError(
-      "Could not fetch contact us content, please try again.",
-      500
-    );
-    return next(error);
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
   }
 };
 
@@ -318,18 +245,9 @@ const updateAboutUsContent = async (req, res, next) => {
         res.json({ contentUpdated: true });
       }
     }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error deleting posts:", error);
     res.status(500).json({ message: "Internal server error" });
-=======
-  } catch (err) {
-    const error = new HttpError(
-      "Could not update about us content, please try again.",
-      500
-    );
-    return next(error);
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
   }
 };
 
@@ -348,7 +266,6 @@ const updateContactUsContent = async (req, res, next) => {
     if (result) {
       res.json({ contentUpdated: true });
     }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error deleting posts:", error);
     res.status(500).json({ message: "Internal server error" });
@@ -364,23 +281,12 @@ const getUsersMessages = async (req, res, next) => {
   } catch (error) {
     console.error("Error deleting posts:", error);
     res.status(500).json({ message: "Internal server error" });
-=======
-  } catch (err) {
-    const error = new HttpError(
-      "Could not update contact us content, please try again.",
-      500
-    );
-    return next(error);
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
   }
 };
 
 module.exports = {
   login,
-<<<<<<< HEAD
   getAllWebPosts,
-=======
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
   deletePost,
   confirmPost,
   getUser,
@@ -390,10 +296,7 @@ module.exports = {
   getContactUsContent,
   updateAboutUsContent,
   updateContactUsContent,
-<<<<<<< HEAD
   getUsersMessages,
   getPostComments,
   deleteComment,
-=======
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 };

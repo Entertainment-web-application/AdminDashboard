@@ -65,11 +65,7 @@ const login = async (req, res) => {
   }
 };
 
-<<<<<<< HEAD
 // Get user posts on users page -- FA
-=======
-// Get user posts
->>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 
 const getUserPosts = async (req, res) => {
   let userId = req.params.userId;
