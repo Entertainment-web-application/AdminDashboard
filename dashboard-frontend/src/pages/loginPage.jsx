@@ -9,7 +9,7 @@ export default function LoginPage() {
 
   const auth = useContext(AuthContext);
   const navigate = useNavigate();
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const {  sendRequest } = useHttpClient();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,6 +31,8 @@ export default function LoginPage() {
       );
       auth.login(responseData.admin_info.admin_id, responseData.token, responseData.admin_info);
       navigate(`/${responseData.admin_info.role}/dashboard`);
+      // navigate("/admin/dashboard");
+
       // if(responseData[0].role === 'admin') navigate(`/${responseData[0].role}/dashboard`);
     } catch (err) {
       console.log(err)
