@@ -22,7 +22,11 @@
     top: 0;
     top: 0;
     left: 250px;
+<<<<<<< HEAD
+    min-height: 100vh;
+=======
     height: 100vh;
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
     width: calc(100% - 250px);
     padding: 1.5rem;
     background-color: var(--primary-color-light);

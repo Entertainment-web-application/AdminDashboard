@@ -20,11 +20,20 @@ const addNewPost = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 const getAllPosts = async (req, res) => {
   try {
     const client = await pool.connect();
 
+<<<<<<< HEAD
     const query = "SELECT * FROM post";
+=======
+    const query =
+      "SELECT post.id, post.title, post.description, post.likes, post.status, users.user_name FROM post JOIN users ON post.user_id = users.id";
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 
     const result = await client.query(query);
     const allPosts = result.rows;
@@ -37,4 +46,8 @@ const getAllPosts = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 module.exports = { addNewPost, getAllPosts };

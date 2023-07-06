@@ -8,6 +8,7 @@
 -- );
 
 
+<<<<<<< HEAD
 -- Post Table Edited by FA
 CREATE TABLE IF NOT EXISTS public.post
 (
@@ -27,6 +28,22 @@ CREATE TABLE IF NOT EXISTS public.post
                 -- when delete user
         ON DELETE CASCADE 
         NOT VALID
+=======
+-- Table: public.post
+
+-- DROP TABLE IF EXISTS public.post;
+
+CREATE TABLE IF NOT EXISTS public.post
+(
+    id integer NOT NULL DEFAULT nextval('post_id_seq'::regclass),
+    user_id integer,
+    title character varying(255) COLLATE pg_catalog."default",
+    description text COLLATE pg_catalog."default",
+    likes integer,
+    "timestamp" timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    status text COLLATE pg_catalog."default" NOT NULL DEFAULT 'pending'::text,
+    CONSTRAINT post_pkey PRIMARY KEY (id)
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 )
 
 TABLESPACE pg_default;
@@ -34,6 +51,7 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public.post
     OWNER to postgres;
 
+<<<<<<< HEAD
 -- --------------------------------------------------------
 -- Comment Table -- FA
 CREATE TABLE IF NOT EXISTS public.comments
@@ -125,6 +143,30 @@ ALTER TABLE IF EXISTS public.contactus
 
 
 -- Admin table --- FA
+=======
+CREATE TABLE comments (
+  id SERIAL PRIMARY KEY,
+  post_id INT,
+  user_id INT,
+  comment TEXT,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (post_id) REFERENCES post (post_id)
+);
+
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  user_name VARCHAR(255) NOT NULL, 
+  user_email VARCHAR(255) NOT NULL,
+  user_password VARCHAR(255) NOT NULL,
+  deleted BOOLEAN DEFAULT false
+);
+
+-- Admin table
+
+
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 CREATE TABLE IF NOT EXISTS public.admin
 (
     admin_id uuid NOT NULL DEFAULT uuid_generate_v4(),
@@ -139,6 +181,7 @@ CREATE TABLE IF NOT EXISTS public.admin
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.admin
+<<<<<<< HEAD
     OWNER to postgres;
 
 
@@ -157,4 +200,6 @@ ALTER TABLE IF EXISTS public.admin
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.users_feedback
+=======
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
     OWNER to postgres;

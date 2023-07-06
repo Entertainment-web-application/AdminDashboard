@@ -12,8 +12,13 @@ import AdminHomePage from "./Home/AdminHomePage";
 // import DeletedAccounts from "./DeletedAccounts/DeletedAccounts";
 import EditContent from "./EditContent/EditContent";
 import AddNewAdmin from "./AddNewAdmin/AddNewAdmin";
-// import AddedServices from "./AddedServices/AddedServices";
+<<<<<<< HEAD
+import Posts from "./Posts/Posts";
 import UsersMessages from "./UsersMessages/UsersMessages";
+=======
+// import AddedServices from "./AddedServices/AddedServices";
+// import UsersMessages from "./UsersMessages/UsersMessages";
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 
 export default function CustomerDashboard() {
 
@@ -71,7 +76,11 @@ export default function CustomerDashboard() {
 
   const fetchAllPosts = async () => {
     try {
+<<<<<<< HEAD
+      let responseData = await sendRequest("http://localhost:3500/admin/getAllWebPosts");
+=======
       let responseData = await sendRequest("http://localhost:3500/posts/getAllPosts");
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
       setAllPosts(responseData);
     } catch(err) {
       console.log(err);
@@ -89,6 +98,7 @@ export default function CustomerDashboard() {
     }
   };
 
+<<<<<<< HEAD
 
   //  fetch user msgs
   const fetchUsersMessages = async () => {
@@ -99,6 +109,16 @@ export default function CustomerDashboard() {
       console.log(err);
     }
   };
+=======
+  // const fetchUsersMessages = async () => {
+  //   try {
+  //     let responseData = await sendRequest("http://localhost:5000/api/admin/get-users-messages");
+  //     setUsersMessages(responseData);
+  //   } catch(err) {
+  //     console.log(err);
+  //   }
+  // };
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
 
   useEffect(() => {
     fetchAllPosts();
@@ -108,14 +128,22 @@ export default function CustomerDashboard() {
     fetchContactUsContent();
     // fetchAdmins();
     // fetchAllServices();
+<<<<<<< HEAD
     fetchUsersMessages();
+=======
+    // fetchUsersMessages();
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
   }, []);
 
   return (
     <div>
       <Sidebar />
       <div className="home">
+<<<<<<< HEAD
         <h1>Welcome To Admin Dashboard</h1>
+=======
+        <h1>hello world</h1>
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
         <Routes>
           <Route
             index
@@ -131,12 +159,20 @@ export default function CustomerDashboard() {
           />
           {/* <Route path="/add-new-user" element={<AddUser />} /> */}
           <Route path="/add-new-admin" element={<AddNewAdmin />} />
+<<<<<<< HEAD
        
           <Route path="/edit-content" element={<EditContent content={aboutUsContent} fetchAboutUsContent={fetchAboutUsContent} contactUsContent={contactUsContent} fetchContactUsContent={fetchContactUsContent} />} />
           <Route path="/users-messages" element={<UsersMessages usersMessages={usersMessages} />} />
+          <Route path="/posts" element={<Posts posts={allPosts} fetchPosts={fetchAllPosts} />} />
           {/* <Route path="/deleted-accounts" element={<DeletedAccounts deletedAccounts={deletedAccounts} />} />
           <Route path="/all-services" element={<AddedServices allServices={allServices} fetchAllServices={fetchAllServices} />} />
         */}
+=======
+          <Route path="/edit-content" element={<EditContent content={aboutUsContent} fetchAboutUsContent={fetchAboutUsContent} contactUsContent={contactUsContent} fetchContactUsContent={fetchContactUsContent} />} />
+          {/* <Route path="/deleted-accounts" element={<DeletedAccounts deletedAccounts={deletedAccounts} />} />
+          <Route path="/all-services" element={<AddedServices allServices={allServices} fetchAllServices={fetchAllServices} />} />
+          <Route path="/users-messages" element={<UsersMessages usersMessages={usersMessages} />} /> */}
+>>>>>>> 34dd3d20efb1fdec2be500c7bc3ada991827699b
         </Routes>
       </div>
     </div>

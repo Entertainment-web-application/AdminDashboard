@@ -1,0 +1,14 @@
+.added-services__container {
+    padding: 1.5rem 2rem;
+}
+
+.post-card {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+}
