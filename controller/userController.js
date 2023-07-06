@@ -65,7 +65,7 @@ const login = async (req, res) => {
   }
 };
 
-// Get user posts
+// Get user posts on users page -- FA
 
 const getUserPosts = async (req, res) => {
   let userId = req.params.userId;

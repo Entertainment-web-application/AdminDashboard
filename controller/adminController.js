@@ -4,34 +4,6 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 const validInfo = require("../utils/UservalidInfo");
 
-// const signup = async (req, res) => {
-//   try {
-//     const { name, email, password } = req.body;
-
-//     const user = await pool.query("SELECT * FROM users WHERE user_email = $1", [email]);
-
-//     if (user.rows.length !== 0) {
-//       return res.status(401).send("User already exists. Please log in.");
-//     }
-
-//     const saltRounds = 10;
-//     const salt = await bcrypt.genSalt(saltRounds);
-//     const hashedPassword = await bcrypt.hash(password, salt);
-
-//     const newUser = await pool.query(
-//       "INSERT INTO users (user_name, user_email, user_password) VALUES ($1, $2, $3) RETURNING *",
-//       [name, email, hashedPassword]
-//     );
-
-//     const token = jwtGenerator(newUser.rows[0]);
-
-//     res.json({ token });
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(500).send("Server Error");
-//   }
-// };
-
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -45,8 +17,6 @@ const login = async (req, res) => {
     if (admin.rows.length === 0) {
       return res.status(401).json("Email or password is incorrect");
     }
-
-    // const validPassword = await bcrypt.compare(
     //   password,
     //   admin.rows[0].user_password
     // );
@@ -64,6 +34,27 @@ const login = async (req, res) => {
   } catch (err) {
     console.error(err.message);
     return res.status(500).send("Server Error");
+  }
+};
+
+
+// get All posts from all users
+const getAllWebPosts = async (req, res) => {
+  try {
+    const client = await pool.connect();
+
+    const query =
+      "SELECT post.id, post.title, post.description, post.likes, post.status, users.user_name FROM post JOIN users ON post.user_id = users.id";
+
+    const result = await client.query(query);
+    const allPosts = result.rows;
+
+    client.release();
+
+    res.status(200).json(allPosts);
+  } catch (error) {
+    console.error("Error retrieving posts:", error);
+    res.status(500).json({ message: "Internal server error" });
   }
 };
 
@@ -263,6 +254,7 @@ const updateContactUsContent = async (req, res, next) => {
 
 module.exports = {
   login,
+  getAllWebPosts,
   deletePost,
   confirmPost,
   getUser,

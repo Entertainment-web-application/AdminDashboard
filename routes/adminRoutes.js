@@ -3,7 +3,9 @@ const router = express.Router();
 const adminController = require("../controller/adminController");
 const validInfo = require("../utils/UservalidInfo");
 
-// router.post('/signup', validInfo, userController.signup);
+// get all web posts
+router.get("/getAllWebPosts", adminController.getAllWebPosts);
+
 // get number of users
 router.get("/get-users", adminController.getUser);
 router.get("/get-aboutus", adminController.getAboutUsContent);
