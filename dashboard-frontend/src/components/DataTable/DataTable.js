@@ -29,21 +29,7 @@ export default function DataTable({ data, fetchData, deletedAccounts, cols }) {
 
   const handleCloseEdit = () => setOpenEditModal(false);
 
-  const updateUserRole = async (newRole) => {
-    let response = await sendRequest(
-      `http://localhost:5000/api/admin/update-user-role/${selectedId}`,
-      "PATCH",
-      JSON.stringify({
-        role: newRole,
-      }),
-      {
-        "Content-Type": "application/json",
-      }
-    );
 
-    fetchData();
-    handleCloseEdit();
-  };
 
   const deleteUser = async (userId) => {
     try {

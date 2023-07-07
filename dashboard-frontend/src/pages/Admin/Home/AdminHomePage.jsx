@@ -151,12 +151,7 @@ export default function AdminHomePage({
           <DataTable data={posts} fetchData={fetchPosts} cols={columns} />
         </div>
       </div>
-      {/* <div className="col-xs-12 col-lg-6">
-          <div className="table-header mb-3">
-            <h5 className="fw-bold">Users List</h5>
-          </div>
-          <DataTable data={users} fetchData={fetchUsers} />
-        </div> */}
+     
       <div className="row w-100">
       
         <div className="col-xs-12">

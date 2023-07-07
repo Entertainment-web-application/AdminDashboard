@@ -17,6 +17,11 @@ export default function ViewPostModal(props) {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
+
+
+
+
+
   return (
     <div>
      
@@ -29,8 +34,8 @@ export default function ViewPostModal(props) {
     maxWidth="sm"
     fullWidth
   >
-    <DialogTitle id="responsive-dialog-title" sx={{ borderBottom: '1px solid #ccc', paddingBottom: '1rem' }}>
-      <span style={{ color: '#777', fontSize: '0.8rem', textTransform: 'uppercase', marginRight: '0.5rem' }}>{props.post.user_name}</span>
+    <DialogTitle id="responsive-dialog-title" sx={{ color: '#0c0c0c', borderBottom: '1px solid #ccc', paddingBottom: '1rem' }}>
+      <span style={{  color: '#777',fontSize: '1.3rem', textTransform: 'uppercase', marginRight: '0.5rem' }}>{props.post.user_name}</span>
       {props.post.title}
     </DialogTitle>
     <DialogContent>
@@ -55,7 +60,7 @@ export default function ViewPostModal(props) {
             ))}
       </div>
     </DialogContent>
-    <DialogActions sx={{ borderTop: '1px solid #ccc', paddingTop: '1rem' }}>
+    {/* <DialogActions sx={{ borderTop: '1px solid #ccc', paddingTop: '1rem' }}>
       <Button 
        className="delete-btn2"
         onClick={() => props.delete(props.id)}
@@ -64,7 +69,7 @@ export default function ViewPostModal(props) {
       >
         Delete Anyway
       </Button>
-    </DialogActions>
+    </DialogActions> */}
   </Dialog>
 </div>
 </div>

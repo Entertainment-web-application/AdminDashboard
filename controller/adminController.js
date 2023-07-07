@@ -17,9 +17,6 @@ const login = async (req, res) => {
     if (admin.rows.length === 0) {
       return res.status(401).json("Email or password is incorrect");
     }
-    //   password,
-    //   admin.rows[0].user_password
-    // );
 
     const validPassword = password == "123456";
 

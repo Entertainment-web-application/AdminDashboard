@@ -8,8 +8,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 // Admin Pages
 
 import AdminHomePage from "./Home/AdminHomePage";
-// import AddUser from "./AddUser/AddUser";
-// import DeletedAccounts from "./DeletedAccounts/DeletedAccounts";
+
 import EditContent from "./EditContent/EditContent";
 import AddNewAdmin from "./AddNewAdmin/AddNewAdmin";
 import Posts from "./Posts/Posts";
@@ -60,14 +59,7 @@ export default function CustomerDashboard() {
     }
   };
 
-  // const fetchAdmins = async () => {
-  //   try {
-  //     let responseData = await sendRequest("http://localhost:5000/api/admin/get-admins");
-  //     setAdmins(responseData);
-  //   } catch(err) {
-  //     console.log(err);
-  //   }
-  // };
+// Fetch all wesite posts
 
   const fetchAllPosts = async () => {
     try {
@@ -103,11 +95,8 @@ export default function CustomerDashboard() {
   useEffect(() => {
     fetchAllPosts();
     fetchAllUsers();
-    // fetchUsers();
     fetchAboutUsContent();
     fetchContactUsContent();
-    // fetchAdmins();
-    // fetchAllServices();
     fetchUsersMessages();
   }, []);
 
@@ -129,15 +118,12 @@ export default function CustomerDashboard() {
               <AdminHomePage posts={allPosts} fetchPosts={fetchAllPosts} />
             }
           />
-          {/* <Route path="/add-new-user" element={<AddUser />} /> */}
           <Route path="/add-new-admin" element={<AddNewAdmin />} />
        
           <Route path="/edit-content" element={<EditContent content={aboutUsContent} fetchAboutUsContent={fetchAboutUsContent} contactUsContent={contactUsContent} fetchContactUsContent={fetchContactUsContent} />} />
           <Route path="/users-messages" element={<UsersMessages usersMessages={usersMessages} />} />
           <Route path="/posts" element={<Posts posts={allPosts} fetchPosts={fetchAllPosts} />} />
-          {/* <Route path="/deleted-accounts" element={<DeletedAccounts deletedAccounts={deletedAccounts} />} />
-          <Route path="/all-services" element={<AddedServices allServices={allServices} fetchAllServices={fetchAllServices} />} />
-        */}
+ 
         </Routes>
       </div>
     </div>
