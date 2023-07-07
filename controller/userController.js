@@ -67,27 +67,27 @@ const login = async (req, res) => {
 
 // Get user posts on users page -- FA
 
-const getUserPosts = async (req, res) => {
-  let userId = req.params.userId;
-  try {
-    const result = await pool.query(
-      "SELECT id, title, description, likes, status FROM post WHERE user_id = $1",
-      [userId]
-    );
+// const getUserPosts = async (req, res) => {
+//   let userId = req.params.userId;
+//   try {
+//     const result = await pool.query(
+//       "SELECT id, title, description, likes, status FROM post WHERE user_id = $1",
+//       [userId]
+//     );
 
-    const allPosts = result.rows;
+//     const allPosts = result.rows;
 
-    console.log(allPosts);
+//     console.log(allPosts);
 
-    res.status(200).json(allPosts);
-  } catch (error) {
-    console.error("Error retrieving posts:", error);
-    res.status(500).json({ message: "Internal server error" });
-  }
-};
+//     res.status(200).json(allPosts);
+//   } catch (error) {
+//     console.error("Error retrieving posts:", error);
+//     res.status(500).json({ message: "Internal server error" });
+//   }
+// };
 
 module.exports = {
   login,
   signup,
-  getUserPosts,
+  // getUserPosts,
 };
