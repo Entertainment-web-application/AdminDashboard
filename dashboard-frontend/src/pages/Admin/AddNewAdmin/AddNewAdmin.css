@@ -1,3 +1,79 @@
-.add-admin__container {
+/* .add-admin__container {
     padding: 1.5rem 2rem;
 }
+
+input {
+    width: 26rem;
+    height: 3.4rem;
+  }
+  label{
+  font-weight: 400;
+    font-size: 1.5rem;
+  } */
+
+
+  .add-admin__container {
+    max-width: 600px;
+    height: 22rem;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  
+  }
+  
+  .add-admin__container h4 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #503c7c;
+  
+
+  }
+  
+  .add-admin__container label {
+    font-size: 20px;
+    font-weight: bold;
+   
+  }
+  
+  .add-admin__container input {
+    width: 100%;
+    height: 3.4rem;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+   .add-admin__container input:hover {
+    box-shadow: -3px -3px 7px #dee0de,
+    2px 2px 5px #d1d6d1;
+
+color: #0c0c0c;
+
+  }
+  
+  .add-admin__container button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+   color: #fefffe;
+  
+    background-color: #503c7c;
+    box-shadow: -3px -3px 7px #dee0de,
+    2px 2px 5px #e5ebe5;
+    float: right;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+   text-align: center;
+  }
+  
+  .add-admin__container button:hover {
+    color: #503c7c;
+    background-color: #f5f7f5;
+
+  }

@@ -130,14 +130,14 @@ export default function AdminHomePage({
       <div className="home-page__items">
         <div className="home-page__item">
           <div className="header">
-            <i className="bx bx-user me-1 mb-0"></i>
+            <i className="bx bx-user Icon me-1 mb-0 "></i>
             <h6 className="fw-bold">Number of Posts</h6>
           </div>
           <h1 className="w-100 text-center">{posts?.length}</h1>
         </div>
         <div className="home-page__item">
           <div className="header">
-            <i className="bx bx-store-alt me-1"></i>
+            <i className="bx bx-store-alt Icon me-1"></i>
             <h6 className="fw-bold">Number of users</h6>
           </div>
           <h1 className="w-100 text-center">{users?.length}</h1>
