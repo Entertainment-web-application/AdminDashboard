@@ -17,16 +17,27 @@
 
 .admin-homepage__container .home-page__item {
     padding: 1rem 1.5rem;
-    background-color: #F7F9F9;
-    border-radius: 15px;
+    background-color: #503c7c;
+    color:rgb(252, 252, 252);
+    border-radius: 18px;
     width: 20rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    
-    
+    box-shadow: -3px -3px 7px #dee0de,
+    2px 2px 5px #d1d6d1;
+    border: none;
+}
+
+.admin-homepage__container .Icon {
+   
+  color:rgb(252, 252, 252);
+   
+    border-radius: 15px;
+   
+  font-size:2.5rem;
+  text-align: center;
 }
 
 .admin-homepage__container .home-page__item .header {
@@ -38,6 +49,12 @@
 
 .admin-homepage__container .home-page__item h1 {
     font-size: 4rem;
+  
+}
+.admin-homepage__container .home-page__item h6 {
+    font-size: 1.2rem;
+
+    font-weight: bold;
 }
 
 .admin-homepage__container .table-header {

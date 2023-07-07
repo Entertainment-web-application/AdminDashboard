@@ -115,7 +115,7 @@ export default function CustomerDashboard() {
     <div>
       <Sidebar />
       <div className="home">
-        <h1>Welcome To Admin Dashboard</h1>
+        <h1 className="mb-5 p-3 " style={{color:"#503c7c"}}>Welcome To Admin Dashboard</h1>
         <Routes>
           <Route
             index

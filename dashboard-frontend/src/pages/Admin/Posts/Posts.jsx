@@ -57,12 +57,14 @@ export default function AddedServices({ posts, fetchPosts }) {
   return (
     <div className='added-services__container'>
         <h4 className='fw-bold'>All Posts</h4>
+        <br/>
         {posts.length > 0 && posts.filter(post => post.status == 'confirmed').map(item => <div key={item.id} className='post-card'>
         {open && <ViewPostModal open={open} close={handleClose} post={item} comments={comments} deleteComment={deleteComment} />}
           <h1>{item.title}</h1>
-          <p>{item.description}</p>
-          <small>{item.user_name}</small>
-          <button className='btn btn-primary' onClick={() => getPostComments(item.id)}>View Post</button>
+          <p >{item.description} </p>
+          <h3>{item.user_name}</h3>
+          <br/>
+          <button class="btn btn-sm mb-0" onClick={() => getPostComments(item.id)}>View Post</button>
         </div>)}
     </div>
   )

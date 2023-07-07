@@ -89,37 +89,39 @@ export default function EditContent({
       <form onSubmit={contentUpdateHandler}>
         <div className="row">
           <div className="col">
-            <input type="text" value={aboutUsData.main_text} name="main_text" onChange={handleAboutUsChange} />
-            <input type="text" value={aboutUsData?.whyChooseUs} name="whyChooseUs" onChange={handleAboutUsChange} />
+            <input type="text" value={aboutUsData.main_text}  placeholder="   User email" name="main_text" onChange={handleAboutUsChange} />
+            <input type="text" value={aboutUsData?.whyChooseUs} name="whyChooseUs" placeholder="   User email" onChange={handleAboutUsChange} />
           </div>
         </div>
         <button type="submit">
           Update Content
         </button>
       </form>
-      <hr />
+      <hr  className="hr" />
       <h1>Contact Us Details</h1>
       <form onSubmit={contactUsUpdateHandler}>
         <div className="row">
           <div className="col">
             <label htmlFor="ourLocation" className="form-label fw-bold">
-              Location Text 
+             
             </label>
             <input
               type="text"
               className="form-control contact-us__input"
               id="ourLocation"
               name="location"
+              placeholder="Location Text "
               value={contactUsData.location}
               onChange={handleChange}
             />
           </div>
           <div className="col">
             <label htmlFor="phoneNumber" className="form-label fw-bold">
-              Phone Number Text
+            
             </label>
             <input
               type="text"
+              placeholder="Phone Number "
               className="form-control contact-us__input"
               id="ourLocation"
               name="phoneNumber"
@@ -129,10 +131,11 @@ export default function EditContent({
           </div>
           <div className="col">
             <label htmlFor="ourLocation" className="form-label fw-bold">
-              Email Text
+             
             </label>
             <input
               type="text"
+              placeholder="Email "
               className="form-control contact-us__input"
               id="ourLocation"
               name="email"

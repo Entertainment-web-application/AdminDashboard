@@ -1,6 +1,72 @@
-.contact-us__input {
-    border: 1px solid lightgray;
-    background: white;
-    padding: .5rem 1.5rem;
-    margin-top: 0px;
-}
+
+
+
+.edit-content__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  background-color: #ffffff;
+  }
+  
+  .edit-content__container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #503c7c;
+  }
+  
+  .edit-content__container form {
+    margin-bottom: 40px;
+   
+  }
+  
+  .edit-content__container form label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .edit-content__container form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #d1cbcb;
+  }
+  .edit-content__container form input[type="text"]:hover {
+    box-shadow: -3px -3px 7px #dee0de,
+    2px 2px 5px #d1d6d1;
+    border: none;
+color: #0c0c0c;
+
+  }
+  .hr{
+margin:5rem;
+width: 35rem;
+
+  }
+  .edit-content__container form button[type="submit"] {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+   color: #fefffe;
+  
+    background-color: #503c7c;
+    box-shadow: -3px -3px 7px #dee0de,
+    2px 2px 5px #e5ebe5;
+    float: right;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+   text-align: center;
+  }
+  
+  .edit-content__container form button[type="submit"]:hover {
+    color: #503c7c;
+    background-color: #f5f7f5;
+
+  }
+  
