@@ -37,11 +37,31 @@ export default function AddedServices({ posts, fetchPosts }) {
         }
       };
 
+    // const confirmService = async (serviceId, email) => {
+    //     let subject = "Service confirmed.";
+    //     let body = "Service has been confirmed.";
+
+    //     try {
+    //       let responseData = await sendRequest(
+    //         `http://localhost:5000/api/admin/confirm-service/${serviceId}`,
+    //         "PATCH"
+    //       );
+          
+    //       if(responseData) fetchAllServices();
+    //       window.open(`mailto:${email}?subject=${subject}&body=${body}`);
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //   };
 
   return (
+    <>
+     <div className='title-container'>
+    <h4 className='fw-bold'>All Posts</h4>
+  </div>
+  
     <div className='added-services__container'>
-        {/* <h4 className='fw-bold'>All Posts</h4> */}
-        <br/>
+     
         {posts.length > 0 && posts.filter(post => post.status == 'confirmed').map(item => <div key={item.id} className='post-card'>
         {open && <ViewPostModal open={open} close={handleClose} post={item} comments={comments} deleteComment={deleteComment} />}
           <h1>{item.title}</h1>
@@ -51,6 +71,7 @@ export default function AddedServices({ posts, fetchPosts }) {
           <button class="btn btn-sm mb-0" onClick={() => getPostComments(item.id)}>View Post</button>
         </div>)}
     </div>
+    </>
   )
 }
 
