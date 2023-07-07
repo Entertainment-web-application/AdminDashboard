@@ -97,7 +97,9 @@ export default function EditContent({
           Update Content
         </button>
       </form>
-      <hr  className="hr" />
+      <br/>
+      <hr />
+
       <h1>Contact Us Details</h1>
       <form onSubmit={contactUsUpdateHandler}>
         <div className="row">
