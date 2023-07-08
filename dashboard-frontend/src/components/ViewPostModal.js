@@ -35,11 +35,11 @@ export default function ViewPostModal(props) {
     fullWidth
   >
     <DialogTitle id="responsive-dialog-title" sx={{ color: ' #666', borderBottom: '1px solid #ccc', paddingBottom: '1rem' }}>
-      <span style={{  color: '#cc8ae7',fontSize: '1.3rem', textTransform: 'uppercase', marginRight: '0.5rem' }}>{props.post.user_name}</span>
+      <span style={{  color: '#3A1078',fontSize: '1.3rem', textTransform: 'uppercase', marginRight: '0.5rem'}}>{props.post.user_name}</span>
       {props.post.title}
     </DialogTitle>
     <DialogContent>
-      <DialogContentText sx={{ marginBottom: '1rem' }}>{props.post.description}</DialogContentText>
+      <DialogContentText sx={{ margin: '1rem' }}>{props.post.description}</DialogContentText>
       <hr style={{ margin: '1rem 0' }} />
       <div className="comments-list card card-body blur shadow-blur mx-4 mt-n6 overflow-hidde">
         {props.comments.length > 0 &&
@@ -47,12 +47,12 @@ export default function ViewPostModal(props) {
             .filter((comment) => !comment.deleted)
             .map((comment) => (
               <div key={comment.id} className="comment-item" sx={{ marginBottom: '1rem', padding: '0.5rem', boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)' }}>
-                <h5 style={{ marginBottom: '0.5rem' ,color:'#0c0c0c'  }}>Added by: <small  style={{ color:' #666' }} > {comment.user_name} </small></h5>
+                <h6 style={{ marginBottom: '0.5rem' ,color:'#0c0c0c'  }}>Added by: <small  style={{ color:' #666' }} > {comment.user_name} </small></h6>
                 <p style={{ margin: 0   ,color:'#0c0c0c'  }}>{comment.comment}</p>
                 <IconButton
                   className="delete-btn"
                   onClick={() => props.deleteComment(comment.id)}
-                  sx={{ color: 'red', marginLeft: 'auto' }}
+                  sx={{ color: '#3A1078', marginLeft: 'auto' }}
                 >
                   <DeleteOutlineIcon />
                 </IconButton>

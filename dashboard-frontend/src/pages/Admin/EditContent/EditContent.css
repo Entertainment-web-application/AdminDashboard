@@ -11,7 +11,7 @@
   .edit-content__container h1 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #503c7c;
+    color: #3A1078;
   }
   
   .edit-content__container form {
@@ -54,7 +54,7 @@ width: 35rem;
     border-radius: 10px;
    color: #fefffe;
   
-    background-color: #503c7c;
+    background-color: #3A1078;
     
     box-shadow: -3px -3px 7px #dee0de,
     2px 2px 5px #e5ebe5;
@@ -66,8 +66,8 @@ width: 35rem;
   }
   
   .edit-content__container form button[type="submit"]:hover {
-    color: #503c7c;
-    background-color: #cc8ae7;
+    color: #3A1078;
+    background-color: #fefffe;
 
   }
   

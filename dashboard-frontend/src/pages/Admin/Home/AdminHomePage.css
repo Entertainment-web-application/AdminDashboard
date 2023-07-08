@@ -17,7 +17,7 @@
 
 .admin-homepage__container .home-page__item {
     padding: 1rem 1.5rem;
-    background-color: #503c7c;
+    background-color: #3A1078;
     color:rgb(252, 252, 252);
     border-radius: 18px;
     width: 20rem;
@@ -79,7 +79,7 @@
     border-radius: 0.5rem;
 }
 .bg-gradient-primary {
-    background-image: linear-gradient(195deg,#cc8ae7,#cc8ae7);
+    background-image: linear-gradient(195deg,#8abce7,#3A1078);
 }
 .text-center {
     text-align: center!important;
