@@ -8,8 +8,10 @@
     height: 100%;
     width: 250px;
     padding: 10px 14px;
-  
+  background-color:#503c7c
+  ;
     transition: var(--tran-05);
+    color:rgb(240, 234, 234);
     z-index: 100;  
 }
 .sidebar.close{
@@ -43,12 +45,12 @@
 
 .sidebar .text,
 .sidebar .icon{
-    color: var(--text-color);
+    color:rgb(248, 249, 250);
     transition: var(--tran-03);
 }
 
 .sidebar .text{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
@@ -65,15 +67,18 @@
 .sidebar header .image-text{
     display: flex;
     align-items: center;
+    color:#f8f7fa
 }
 .sidebar header .logo-text{
     display: flex;
     flex-direction: column;
+    color:rgb(249, 249, 250);
 }
 header .image-text .name {
     margin-top: 2px;
     font-size: 20px;
     font-weight: 600;
+    color:#f5f4f7; 
 }
 
 header .image-text .profession{
@@ -91,7 +96,8 @@ header .image-text .profession{
 .sidebar header .image img{
     width: 40px;
     border-radius: 6px;
-   
+    background-color:#503c7c;
+
 }
 
 .sidebar header .toggle{
@@ -101,8 +107,9 @@ header .image-text .profession{
     transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
-    background-color: var(--primary-color);
-    color:rgb(255, 255, 255);
+    background-color:#29282b;
+
+    color:rgb(247, 244, 244);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -113,7 +120,7 @@ header .image-text .profession{
 }
 
 body.dark .sidebar header .toggle{
-    color: var(--text-color);
+    color:rgb(255, 254, 254);
 }
 
 .sidebar.close .toggle{
@@ -136,7 +143,7 @@ body.dark .sidebar header .toggle{
 
 .sidebar li.search-box{
     border-radius: 6px;
-    background-color: var(--primary-color-light);
+    background-color:rgb(248, 247, 247);
     cursor: pointer;
     transition: var(--tran-05);
 }
@@ -168,19 +175,22 @@ body.dark .sidebar header .toggle{
 
 .sidebar li a:hover{
     background-color:rgb(255, 255, 255);
-    color:rgb(104, 98, 98);
+    color:rgb(252, 247, 247);
 }
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
-    color:rgb(104, 98, 98);
+    color:rgb(29, 28, 28);
+
 }
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
-    color: var(--text-color);
+ 
+    color:rgb(248, 240, 240);
+
 }
 .sidebar li a:focus{
-    background-color:rgb(255, 255, 255);
-    color:rgb(104, 98, 98);
+    background-color:#503c7c;
+    color:rgb(255, 255, 255);
 
 }
 .sidebar .menu-bar{
@@ -234,7 +244,7 @@ body.dark .mode .sun-moon i.moon{
     height: 22px;
     width: 40px;
     border-radius: 25px;
-    background-color: var(--toggle-color);
+    background-color: #fefeff; 
     transition: var(--tran-05);
 }
 

@@ -63,3 +63,36 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+
+.border-radius-lg {
+    border-radius: 0.5rem;
+}
+.icon-lg {
+    width: 64px;
+    height: 64px;
+}
+.icon-shape {
+    width: 48px;
+    height: 478px;
+    background-position: 50%;
+    border-radius: 0.5rem;
+}
+.bg-gradient-primary {
+    background-image: linear-gradient(195deg,#cc8ae7,#cc8ae7);
+}
+.text-center {
+    text-align: center!important;
+   
+}
+.shadow {
+    box-shadow: 0 4px 6px -1px rgba(112, 109, 109, 0.664),0 2px 4px -1px rgba(97, 92, 92, 0.788)!important;
+}
+
+.icon-lg {
+    height: 1.6em;
+    width: 1.6em;
+    /* padding-top: 13px; */
+}
+
+

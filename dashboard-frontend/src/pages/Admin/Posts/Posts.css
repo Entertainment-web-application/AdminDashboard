@@ -76,14 +76,40 @@ margin-right: 1rem;
   text-transform: uppercase;
   font-family: inherit;
   font-size: inherit;
+  font-weight: 600;
   line-height: inherit;
   display: inline-block;
   position: absolute;
   bottom: 11px;
   right: 6px;
 }
-
+/* ////// */
 .post-card button:hover {
   background-color: #503c7c;
-  color: #f4f1f8;
+  color:#fefdff;
+}
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+  .added-services__container {
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .post-card {
+    width: calc(50% - 1rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .post-card {
+    width: 100%;
+  }
+  
+  .post-card button {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
