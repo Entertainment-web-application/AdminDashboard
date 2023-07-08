@@ -76,11 +76,3 @@ export default function AddedServices({ posts, fetchPosts }) {
 }
 
 
-{/* <>
-                <IconButton onClick={() => deleteService(params.row.id, params.row.email)}>
-                  <DeleteOutlineIcon sx={{ color: "red" }} />
-                </IconButton>
-                {params.row.status !== 'confirmed' && <IconButton onClick={() => confirmService(params.row.id, params.row.email)}>
-                  <CheckCircleIcon sx={{ color: "green" }} />
-                </IconButton>}
-              </> */}

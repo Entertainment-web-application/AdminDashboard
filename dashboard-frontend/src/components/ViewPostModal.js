@@ -34,8 +34,8 @@ export default function ViewPostModal(props) {
     maxWidth="sm"
     fullWidth
   >
-    <DialogTitle id="responsive-dialog-title" sx={{ color: '#0c0c0c', borderBottom: '1px solid #ccc', paddingBottom: '1rem' }}>
-      <span style={{  color: '#777',fontSize: '1.3rem', textTransform: 'uppercase', marginRight: '0.5rem' }}>{props.post.user_name}</span>
+    <DialogTitle id="responsive-dialog-title" sx={{ color: ' #666', borderBottom: '1px solid #ccc', paddingBottom: '1rem' }}>
+      <span style={{  color: '#cc8ae7',fontSize: '1.3rem', textTransform: 'uppercase', marginRight: '0.5rem' }}>{props.post.user_name}</span>
       {props.post.title}
     </DialogTitle>
     <DialogContent>
@@ -46,7 +46,7 @@ export default function ViewPostModal(props) {
           props.comments
             .filter((comment) => !comment.deleted)
             .map((comment) => (
-              <div key={comment.id} className="comment-item" sx={{ marginBottom: '1rem', padding: '0.5rem', borderRadius: '6px', boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)' }}>
+              <div key={comment.id} className="comment-item" sx={{ marginBottom: '1rem', padding: '0.5rem', boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)' }}>
                 <h5 style={{ marginBottom: '0.5rem' ,color:'#0c0c0c'  }}>Added by: <small  style={{ color:' #666' }} > {comment.user_name} </small></h5>
                 <p style={{ margin: 0   ,color:'#0c0c0c'  }}>{comment.comment}</p>
                 <IconButton

@@ -99,20 +99,21 @@ export default function DataTable({ data, fetchData, deletedAccounts, cols }) {
         delete={deleteUser}
       />
 
-      <DataGrid
-        rows={data}
-        columns={cols || columns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 5,
-            },
-          },
-        }}
-        pageSizeOptions={[5]}
-        checkboxSelection
-        disableRowSelectionOnClick
-      />
+<DataGrid
+  rows={data}
+  columns={cols || columns}
+  initialState={{
+    pagination: {
+      paginationModel: {
+        pageSize: 5,
+      },
+    },
+  }}
+  pageSizeOptions={[5]}
+  checkboxSelection
+  disableRowSelectionOnClick
+  sx={{ fontSize: '18px' }}
+/>
     </Box>
   );
 }

@@ -81,8 +81,9 @@ export default function Sidebar({ isSubscribed }) {
 
           <li className="nav-link">
             <Link to="/admin/dashboard/posts">
-              <i className="bx bx-edit icon"></i>
+              <i className="bx bx-calendar icon"></i>
               <span className="text nav-text">All Posts</span>
+          
             </Link>
           </li>
 

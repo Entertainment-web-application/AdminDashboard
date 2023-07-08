@@ -128,16 +128,18 @@ export default function AdminHomePage({
   return (
     <div className="admin-homepage__container">
       <div className="home-page__items">
-        <div className="home-page__item">
-          <div className="header">
-            <i className="bx bx-user Icon me-1 mb-0 "></i>
+        <div className="home-page__item ">
+          <div className="header ">
+          <i className="bx bx-calendar Icon me-3 pt-3  icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg"></i>
+          {/* class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg" */}
             <h6 className="fw-bold">Number of Posts</h6>
           </div>
           <h1 className="w-100 text-center">{posts?.length}</h1>
         </div>
         <div className="home-page__item">
           <div className="header">
-            <i className="bx bx-store-alt Icon me-1"></i>
+           
+            <i className="bx bx-user Icon  me-3 pt-3  icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg"></i>
             <h6 className="fw-bold">Number of users</h6>
           </div>
           <h1 className="w-100 text-center">{users?.length}</h1>
@@ -151,7 +153,12 @@ export default function AdminHomePage({
           <DataTable data={posts} fetchData={fetchPosts} cols={columns} />
         </div>
       </div>
-     
+      {/* <div className="col-xs-12 col-lg-6">
+          <div className="table-header mb-3">
+            <h5 className="fw-bold">Users List</h5>
+          </div>
+          <DataTable data={users} fetchData={fetchUsers} />
+        </div> */}
       <div className="row w-100">
       
         <div className="col-xs-12">
