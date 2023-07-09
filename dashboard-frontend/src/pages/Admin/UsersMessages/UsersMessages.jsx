@@ -7,7 +7,7 @@ export default function UsersMessages({ usersMessages }) {
         <h4 className='fw-bold mb-4'>Users Feedback</h4>
         <div className="users-messages__list mt-5">
         {usersMessages && usersMessages.length > 0 && usersMessages.map(message => <div className="list-item" key={message.id}>
-        <img width="48" height="48" src="https://img.icons8.com/color/48/new-post.png" alt="new-post"/>
+        <img width="50" height="40" src="https://cdn4.iconfinder.com/data/icons/essentials-72/24/049_-_Chat-512.png" alt="new-post"/>
             <h5 className='mt-3 mb-1 text-capitalize fw-bold'>{message.message}</h5>
             <small>sent by - {message.user_name}</small>
             <h6>{message.user_email}</h6>

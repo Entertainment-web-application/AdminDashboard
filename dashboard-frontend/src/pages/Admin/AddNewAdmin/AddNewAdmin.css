@@ -14,7 +14,7 @@
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 20px;
-    color: #3A1078;
+    color: #390342;
   
 
   }
@@ -39,7 +39,7 @@
     box-shadow: -3px -3px 7px #dee0de,
     2px 2px 5px #d1d6d1;
 
-color: #3A1078;
+color: #390342;
 
   }
   
@@ -50,7 +50,7 @@ color: #3A1078;
     border-radius: 10px;
    color: #fefffe;
   
-    background-color: #3A1078;
+    background-color: #390342;
     box-shadow: -3px -3px 7px #dee0de,
     2px 2px 5px #e5ebe5;
     float: right;
@@ -61,7 +61,7 @@ color: #3A1078;
   }
   
   .add-admin__container button:hover {
-    color: #3A1078;
+    color: #390342;
     background-color: #f5f6f7;
 
   }

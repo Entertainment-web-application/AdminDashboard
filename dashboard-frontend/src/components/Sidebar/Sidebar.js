@@ -38,10 +38,10 @@ export default function Sidebar({ isSubscribed }) {
             )}
             {user?.role !== "admin" && (
               <lottie-player
-                src="https://assets9.lottiefiles.com/packages/lf20_myor1trh.json"
+                src="https://assets9.lottiefiles.com/packages/lf20_gQhRbo.json"
                 background="transparent"
                 speed="1"
-                style={{ width: "50px", height: "50px" }}
+                style={{ width: "80px", height: "80px" }}
                 autoplay
               ></lottie-player>
             )}

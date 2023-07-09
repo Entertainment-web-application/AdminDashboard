@@ -149,6 +149,7 @@ export default function EditContent({
         <button type="submit">
           Update Content
         </button>
+        <br />
       </form>
     </div>
   );

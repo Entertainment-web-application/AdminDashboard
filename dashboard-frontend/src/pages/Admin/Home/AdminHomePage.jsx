@@ -59,7 +59,7 @@ export default function AdminHomePage({
   };
 
   const columns = [
-    { field: "id", headerName: "ID", width: 70 },
+    // { field: "id", headerName: "ID", width: 70 },
     {
       field: "user_name",
       headerName: "Username",
@@ -75,11 +75,11 @@ export default function AdminHomePage({
       headerName: "Post Description",
       width: 200,
     },
-    {
-      field: "likes",
-      headerName: "Likes",
-      width: 90,
-    },
+    // {
+    //   field: "likes",
+    //   headerName: "Likes",
+    //   width: 90,
+    // },
     {
       field: "actions",
       headerName: "Actions",
@@ -88,10 +88,10 @@ export default function AdminHomePage({
         return (
           <>
           <IconButton onClick={() => deletePost(params.row.id)}>
-            <DeleteOutlineIcon sx={{ color: "red" }} />
+            <DeleteOutlineIcon sx={{ color: '#390342' }} />
           </IconButton>
          {params.row.status !== 'confirmed' && <IconButton onClick={() => confirmPost(params.row.id)}>
-          <CheckCircleIcon sx={{ color: "green" }} />
+          <CheckCircleIcon sx={{ color: '#390342' }} />
         </IconButton>}
         </>
         );
@@ -100,7 +100,7 @@ export default function AdminHomePage({
   ];
 
   const usersColumns = [
-    { field: "id", headerName: "ID", width: 70 },
+    // { field: "id", headerName: "ID", width: 70 },
     {
       field: "user_name",
       headerName: "Username",
@@ -118,7 +118,7 @@ export default function AdminHomePage({
       renderCell: (params) => {
         return (
           <IconButton onClick={() => deleteUser(params.row.id)}>
-            <DeleteOutlineIcon sx={{ color: "red" }} />
+            <DeleteOutlineIcon sx={{ color: '#390342' }} />
           </IconButton>
         );
       },

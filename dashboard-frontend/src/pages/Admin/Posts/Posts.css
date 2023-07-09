@@ -33,7 +33,7 @@ margin-right: 1rem;
 .post-card h1 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #3A1078;
+  color: #390342;
 
 }
 
@@ -56,7 +56,7 @@ margin-right: 1rem;
 .post-card h3 {
   font-size: 0.9rem;
   text-transform: uppercase;
-  color: #3A1078;
+  color: #390342;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -71,8 +71,8 @@ margin-right: 1rem;
   box-shadow: 0 4px 7px -1px rgba(0,0,0,.11), 0 2px 4px -1px rgba(0,0,0,.07);
   background-size: 150%;
   background-position-x: 25%;
-  background-color: #3A1078;
-  border-color: #3A1078;
+  background-color: #390342;
+  border-color: #390342;
   margin: 0;
   text-transform: uppercase;
   font-family: inherit;
@@ -87,7 +87,7 @@ margin-right: 1rem;
 /* ////// */
 .post-card button:hover {
   background-color: #fefffe;
-  color:#3A1078;
+  color:#390342;
 }
 /* Media queries */
 

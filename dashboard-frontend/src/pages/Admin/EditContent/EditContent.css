@@ -11,7 +11,7 @@
   .edit-content__container h1 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #3A1078;
+    color: #390342;
   }
   
   .edit-content__container form {
@@ -54,7 +54,7 @@ width: 35rem;
     border-radius: 10px;
    color: #fefffe;
   
-    background-color: #3A1078;
+    background-color: #390342;
     
     box-shadow: -3px -3px 7px #dee0de,
     2px 2px 5px #e5ebe5;

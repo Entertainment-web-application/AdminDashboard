@@ -37,23 +37,6 @@ export default function AddedServices({ posts, fetchPosts }) {
         }
       };
 
-    // const confirmService = async (serviceId, email) => {
-    //     let subject = "Service confirmed.";
-    //     let body = "Service has been confirmed.";
-
-    //     try {
-    //       let responseData = await sendRequest(
-    //         `http://localhost:5000/api/admin/confirm-service/${serviceId}`,
-    //         "PATCH"
-    //       );
-          
-    //       if(responseData) fetchAllServices();
-    //       window.open(`mailto:${email}?subject=${subject}&body=${body}`);
-    //     } catch (err) {
-    //       console.log(err);
-    //     }
-    //   };
-
   return (
     <>
      <div className='title-container'>
@@ -69,6 +52,7 @@ export default function AddedServices({ posts, fetchPosts }) {
           <h3>{item.user_name}</h3>
           <br/>
           <button class="btn btn-sm mb-0" onClick={() => getPostComments(item.id)}>View Post</button>
+          <br />
         </div>)}
     </div>
     </>

@@ -32,23 +32,23 @@ export default function AddNewAdmin() {
     }
   };
 
-  return (
-    <div className="add-admin__container mt-5">
-      <h4 className="fw-bold">Add new Admin</h4>
-      <form onSubmit={addNewAdminHandler} className="w-100">
-     
-           
-            <input type="text" className="form-control mb-2" placeholder=" User Name" required onChange={(e) => setUsername(e.target.value)} />
-           
-           
-            <input type="email" className="form-control mb-2"  placeholder="User email" required  onChange={(e) => setEmail(e.target.value)} />
-            <label for="exampleInputEmail1" className="form-label">
+
+return (
+  <div className="add-admin__container mt-5">
+    <h4 className="fw-bold">Add new Admin</h4>
+    <form onSubmit={addNewAdminHandler} className="w-100">
+   
          
-              </label>
-           
-            <input type="password" className="form-control mb-2"  placeholder="User password" required  onChange={(e) => setPassword(e.target.value)} />
-           <button type="submit " className="btn btn-primary mt-3">submit</button>
-          </form>
-    </div>
-  );
+          <input type="text" className="form-control mb-2" placeholder=" User Name" required onChange={(e) => setUsername(e.target.value)} />
+         
+         
+          <input type="email" className="form-control mb-2"  placeholder="User email" required  onChange={(e) => setEmail(e.target.value)} />
+         
+         
+          <input type="password" className="form-control mb-2"  placeholder="User password" required  onChange={(e) => setPassword(e.target.value)} />
+         <button type="submit " className="btn btn-primary mt-3">submit</button>
+         <br />
+        </form>
+  </div>
+);
 }
