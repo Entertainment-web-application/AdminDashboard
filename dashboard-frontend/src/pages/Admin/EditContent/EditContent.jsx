@@ -89,8 +89,8 @@ export default function EditContent({
       <form onSubmit={contentUpdateHandler}>
         <div className="row">
           <div className="col">
-            <input type="text" value={aboutUsData.main_text}  placeholder="   User email" name="main_text" onChange={handleAboutUsChange} />
-            <input type="text" value={aboutUsData?.whyChooseUs} name="whyChooseUs" placeholder="   User email" onChange={handleAboutUsChange} />
+            <input type="text" value={aboutUsData.main_text}  placeholder="main text" name="main_text" onChange={handleAboutUsChange} />
+            <input type="text" value={aboutUsData?.whyChooseUs} name="whyChooseUs" placeholder="why choose us " onChange={handleAboutUsChange} />
           </div>
         </div>
         <button type="submit">
