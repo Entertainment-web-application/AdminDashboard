@@ -3,7 +3,6 @@ const { jwtGenerator } = require("../utils/jwtGenerator");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
 const validInfo = require("../utils/UservalidInfo");
-
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -18,13 +17,12 @@ const login = async (req, res) => {
       return res.status(401).json("Email or password is incorrect");
     }
 
-    const validPassword = password == "123456";
+    const admin_info = admin.rows[0];
+    const adminPassword = admin_info.admin_password;
 
-    if (!validPassword) {
+    if (password !== adminPassword) {
       return res.status(401).json("Email or password is incorrect");
     }
-
-    const admin_info = admin.rows[0];
 
     const token = jwtGenerator(admin_info);
     return res.json({ token: token, admin_info });
