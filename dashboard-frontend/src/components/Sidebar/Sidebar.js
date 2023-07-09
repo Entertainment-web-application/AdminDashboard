@@ -29,7 +29,7 @@ export default function Sidebar({ isSubscribed }) {
           <span className="image">
             {user?.role === "admin" && (
               <lottie-player
-                src="https://assets6.lottiefiles.com/packages/lf20_a91d7Z.json"
+                src="https://assets9.lottiefiles.com/packages/lf20_gQhRbo.json"
                 background="transparent"
                 speed="1"
                 style={{ width: "100px", height: "100px" }}

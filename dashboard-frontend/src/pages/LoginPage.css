@@ -6,7 +6,36 @@
 }
 
 .admin-login__container .row .col-xs-12:last-child {
-    background-color: #0288D1;
+    background-color: #390342;
     min-height: 98vh;
     border-radius: 20px;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .purple-button {
+    background-color: #390342;
+    border-color: #390342;
+   
+  }
+
+
+  .purple-button:hover {
+    background-color: #fbfbfb;
+    border-color: #fbfbfb;
+    color: #390342;
+    box-shadow: 0 4px 7px -1px rgba(0,0,0,.11), 0 2px 4px -1px rgba(0,0,0,.07);
+
+   
+  }

@@ -44,27 +44,44 @@ export default function LoginPage() {
   return (
     <div className="admin-login__container">
       <div className="row w-100 p-2">
-        <div className="col-xs-12 col-lg-4 px-4 center">
-          <h1 className="fw-bold mb-2 text-center">Welcome Back</h1>
+        <div className="col-xs-12 col-lg-4 px-4 center mt-4">
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+
+        <h1 className="fw-bold mb-2 text-center mt-4">Welcome Back</h1>
           <h6 className="mb-5 text-center">Please enter your details</h6>
           {error && (
-            <div className="error-message" style={{ color: "red" }}>{error}</div> // Display the error message if error state is not null
+            <div className="error-message" style={{ color: '390342' }}>{error}</div> // Display the error message if error state is not null
           )}
           <br/>
           <form onSubmit={loginHandler} className="w-100">
             <input
               type="email"
               className="form-control"
+              style={{ marginLeft:"2px", marginTop:"10px" }}
+              placeholder="Email"
+
               onChange={(e) => setEmail(e.target.value)}
               required
+
             />
+            
             <input
               type="password"
               className="form-control"
+              style={{ marginLeft:"2px", marginTop:"10px" }}
+              placeholder="Password"
+
               onChange={(e) => setPassword(e.target.value)}
               required
+
             />
-            <button className="btn btn-primary" type="submit">
+            <br />
+            <button className="btn btn-primary purple-button ms-1" type="submit">
               Submit
             </button>
           </form>
@@ -74,11 +91,13 @@ export default function LoginPage() {
             src="https://assets8.lottiefiles.com/private_files/lf30_m6j5igxb.json"
             background="transparent"
             speed="1"
-            style={{ width: "500px", height: "500px" }}
+            style={{ width: "500px", height: "500px" , marginLeft:"230px", marginTop:"150px"  }}
             loop
             autoplay
           ></lottie-player>
         </div>
+
+        
       </div>
     </div>
   );
