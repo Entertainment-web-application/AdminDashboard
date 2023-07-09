@@ -24,4 +24,4 @@ It features diverse artworks, artist profiles, exhibitions, and a vibrant commun
 > Helpful Links:
 
 - [Trello](https://trello.com/b/a4TQ446T/entertainment-web-application)
-- [Figma] (https://www.figma.com/file/UoMc6rEpG2eR8NAB63lDUQ/ArtRealm?fuid=1211620216490156197)
+- [Figma](https://www.figma.com/file/UoMc6rEpG2eR8NAB63lDUQ/ArtRealm?fuid=1211620216490156197)
